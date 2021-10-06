@@ -4,11 +4,9 @@
 // of the anonymous function on line 6
 
 const substitutionModule = (function () {
-  // you can add any code you want within this function scope
-  // let abet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   let abet = "abcdefghijklmnopqrstuvwxyz";
   function substitution(input, alphabet, encode = true) {
-    // your solution code here
+    //checks to make sure alphabet exists and has a length of exactly 26
     if (alphabet == undefined || alphabet.length != 26) return false;
     //loop through given alphabet to check for duplicate characters
     let dupetest = [];
@@ -17,12 +15,15 @@ const substitutionModule = (function () {
         return false;
       } else dupetest.push(alphabet.charAt(i));
     }
+    //converts the message using the encoding alphabet
     let convertedMessage = "";
     for (i = 0; i < input.length; i++) {
       let a = 0;
+      //ignores characters not provided in the alphabet
       if (alphabet.search(input.charAt(i)) == -1) {
         convertedMessage += input.charAt(i);
       } else {
+        //tests to determine whether the program should encode or decode
         if (encode == true) {
           a = abet.search(input.charAt(i));
           convertedMessage += alphabet.charAt(a);

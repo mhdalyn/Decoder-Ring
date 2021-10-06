@@ -4,7 +4,6 @@
 // of the anonymous function on line 6
 
 const caesarModule = (function () {
-  // you can add any code you want within this function scope
 
   function caesar(input, shift, encode = true) {
     //conditional test that filters out function calls with incorrect shift codes

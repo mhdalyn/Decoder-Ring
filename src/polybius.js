@@ -33,7 +33,6 @@ const polybiusModule = (function () {
     {num: 55, char: "z"}
   ]
   function polybius(input, encode = true) {
-    // your solution code here
     try {
     if (encode) {
       let encryptedMessage = input.toLowerCase();
