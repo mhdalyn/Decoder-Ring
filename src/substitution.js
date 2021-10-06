@@ -9,11 +9,11 @@ const substitutionModule = (function () {
     //checks to make sure alphabet exists and has a length of exactly 26
     if (alphabet == undefined || alphabet.length != 26) return false;
     //loop through given alphabet to check for duplicate characters
-    let dupetest = [];
+    let dupeTest = [];
     for (i = 0; i < alphabet.length; i++) {
-      if (dupetest.includes(alphabet.charAt(i))) {
+      if (dupeTest.includes(alphabet.charAt(i))) {
         return false;
-      } else dupetest.push(alphabet.charAt(i));
+      } else dupeTest.push(alphabet.charAt(i));
     }
     //converts the message using the encoding alphabet
     let convertedMessage = "";
