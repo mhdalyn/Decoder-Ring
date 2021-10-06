@@ -13,7 +13,7 @@
     "test:solution": "npm run docker:build && npm run docker:test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nicholas Brown",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",

@@ -6,11 +6,12 @@
 const caesarModule = (function () {
 
   function caesar(input, shift, encode = true) {
-    
+
     //conditional test that filters out function calls with incorrect shift codes
     if (shift == 0 || shift < -25 || shift > 25 || !shift) return false;
 
     let cipher = shift
+    
     //allows decoding messages by reversing shift
     if (encode === false) {
       cipher = -cipher;
