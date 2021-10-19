@@ -35,13 +35,12 @@ const polybiusModule = (function () {
   function polybius(input, encode = true) {
     try {
 
-      //separates code into separate blocks for encoding/decoding
+      //separates code into separate blocks for encoding/dehcoding
       if (encode) {
         let encryptedMessage = input.toLowerCase();
 
         //replaces i & j with 42
-        encryptedMessage = encryptedMessage.replace(/i/g, 42);
-        encryptedMessage = encryptedMessage.replace(/j/g, 42);
+        encryptedMessage = encryptedMessage.replace(/[ij]/g, 42);
 
         //replaces all other characters by using a while loop that runs as long as that character exists within the message
         cipher.forEach((key) => {
